@@ -1,0 +1,386 @@
+/*
+#navbar {
+  background-color: #333; /* Black background color */
+/*position: fixed; /* Make it stick/fixed */
+/*top: 0; /* Stay on top */
+/*  width: 100%; /* Full width */
+/*transition: top 0.3s; /* Transition effect when sliding down (and up) */
+/*}
+
+/* Style the navbar links */
+/*#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+*/
+/* Fixed header and footer*/
+/* line 34, ../../sass/mobile/nav_m.scss */
+#header, #footer {
+  position: fixed;
+  height: 50px;
+  display: block;
+  width: 100%;
+  background-color: #11ffee00;
+  z-index: 9;
+  padding: 20px 0 0 0;
+  font-family: 'aileronsregular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 50, ../../sass/mobile/nav_m.scss */
+#header {
+  top: 0px;
+}
+
+/* line 53, ../../sass/mobile/nav_m.scss */
+#footer {
+  bottom: 0px;
+}
+
+/* line 59, ../../sass/mobile/nav_m.scss */
+nav .brand-logo {
+  color: black;
+  opacity: 1;
+}
+
+/* Main menu positionning */
+/* line 69, ../../sass/mobile/nav_m.scss */
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #1A1A1A;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .375s;
+}
+
+/* line 83, ../../sass/mobile/nav_m.scss */
+.main-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+  height: 100%;
+}
+
+/* RED band effect */
+/* line 91, ../../sass/mobile/nav_m.scss */
+.main-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px;
+  background: #F07176;
+  transform-origin: 0 0;
+  transform: skew(-14deg) translateX(-120%);
+  transition: all .275s .1s;
+}
+
+/* line 104, ../../sass/mobile/nav_m.scss */
+.main-nav.is-open::before {
+  transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+/* line 109, ../../sass/mobile/nav_m.scss */
+.main-nav ul {
+  display: inline-flex;
+  flex-direction: column;
+  height: 93%;
+  /* Should be 100%, but we have a notice message :D */
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-18%) skew(-16deg);
+}
+
+/* line 118, ../../sass/mobile/nav_m.scss */
+.main-nav li {
+  display: block;
+  margin: .5rem 0;
+  text-align: right;
+  transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+/* line 126, ../../sass/mobile/nav_m.scss */
+.main-nav a {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* line 131, ../../sass/mobile/nav_m.scss */
+.brand-logo {
+  color: black;
+  opacity: 1;
+}
+
+/* line 136, ../../sass/mobile/nav_m.scss */
+.main-nav.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* line 140, ../../sass/mobile/nav_m.scss */
+.main-nav li:nth-child(1) a {
+  transition: all 275ms 175ms;
+}
+
+/* line 143, ../../sass/mobile/nav_m.scss */
+.main-nav li:nth-child(2) a {
+  transition: all 275ms 225ms;
+}
+
+/* line 146, ../../sass/mobile/nav_m.scss */
+.main-nav li:nth-child(3) a {
+  transition: all 275ms 275ms;
+}
+
+/* line 149, ../../sass/mobile/nav_m.scss */
+.main-nav li:nth-child(4) a {
+  transition: all 275ms 325ms;
+}
+
+/* line 152, ../../sass/mobile/nav_m.scss */
+.main-nav li:nth-child(5) a {
+  transition: all 275ms 375ms;
+}
+
+/* Decoration */
+/* line 158, ../../sass/mobile/nav_m.scss */
+.main-nav ul,
+.main-nav li {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 163, ../../sass/mobile/nav_m.scss */
+.main-nav a {
+  font-family: 'aileronsregular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+  padding: 12px 0;
+  color: #1A1A1A;
+  font-size: 1.4em;
+  text-decoration: none;
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+/* line 176, ../../sass/mobile/nav_m.scss */
+.open-main-nav {
+  position: absolute;
+  top: 15px;
+  padding-top: 20px;
+  right: 15px;
+  z-index: 1000;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* line 186, ../../sass/mobile/nav_m.scss */
+.open-main-nav:focus {
+  outline: none;
+}
+
+/* line 189, ../../sass/mobile/nav_m.scss */
+.burger {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 0 auto;
+  background: #5A3B5D;
+  transform: skew(5deg);
+  transition: all .275s;
+}
+
+/* line 200, ../../sass/mobile/nav_m.scss */
+.burger:after,
+.burger:before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #5A3B5D;
+  transition: all .275s;
+}
+
+/* line 209, ../../sass/mobile/nav_m.scss */
+.burger:after {
+  transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+/* line 213, ../../sass/mobile/nav_m.scss */
+.burger:before {
+  transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+/* line 218, ../../sass/mobile/nav_m.scss */
+.is-open .burger {
+  transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+/* line 222, ../../sass/mobile/nav_m.scss */
+.is-open .burger:before {
+  transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+/* line 226, ../../sass/mobile/nav_m.scss */
+.is-open .burger:after {
+  transform: translateY(-12px) translateX(10px) skew(-20deg);
+  opacity: 0;
+}
+
+/* MENU Text part */
+/* line 233, ../../sass/mobile/nav_m.scss */
+.burger-text {
+  display: block;
+  font-size: .675rem;
+  letter-spacing: .05em;
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  color: #5A3B5D;
+}
+
+/* line 244, ../../sass/mobile/nav_m.scss */
+.device {
+  position: relative;
+  width: 345px;
+  height: 600px;
+  background: #FFF;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* line 254, ../../sass/mobile/nav_m.scss */
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #eee, #ddd);
+}
+
+/*#fp-nav{
+	position:absolute;
+	bottom:0px !important;
+	left:50px;
+}*/
+/* line 5, ../../sass/mobile/home_m.scss */
+.titleAI, .titleBT {
+  font-size: 22vw;
+  font-family: 'aileronsregular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 13, ../../sass/mobile/home_m.scss */
+.titleAI {
+  position: absolute;
+  top: 150px;
+  left: 4vw;
+}
+
+/* line 20, ../../sass/mobile/home_m.scss */
+.titleBT {
+  position: absolute;
+  top: 280px;
+  left: 30vw;
+}
+
+/* line 28, ../../sass/mobile/home_m.scss */
+header {
+  background: url(../img/home_m.png) no-repeat top center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 35, ../../sass/mobile/home_m.scss */
+#container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 46, ../../sass/mobile/home_m.scss */
+.sliderA .titleAI {
+  position: absolute;
+  top: 150px;
+  left: 4vw;
+}
+
+/* line 54, ../../sass/mobile/home_m.scss */
+.img_m_1 {
+  display: block;
+  position: absolute;
+  height: 260px !important;
+  width: 85px !important;
+  top: 80vw;
+  left: 6vw;
+}
+
+/* line 63, ../../sass/mobile/home_m.scss */
+.img_m_2 {
+  display: block;
+  position: absolute;
+  height: 90px !important;
+  width: 260px !important;
+  top: 100vw;
+  right: 6vw;
+}
+
+/* line 73, ../../sass/mobile/home_m.scss */
+.img_m_3 {
+  display: block;
+  position: absolute;
+  height: 90px !important;
+  width: 260px !important;
+  top: 150vw;
+  left: 6vw;
+}
+
+/* line 82, ../../sass/mobile/home_m.scss */
+.img_m_4 {
+  display: block;
+  position: absolute;
+  height: 260px !important;
+  width: 85px !important;
+  top: 130vw;
+  right: 6vw;
+}
+
+/* line 92, ../../sass/mobile/home_m.scss */
+#imgparalax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+
+
+@import "compass/reset";
+@import "compass/css3";
+
+// ********* IMPORTS **********
+
+@import "mobile/style_m.scss";
+//@import "mobile/nav_m.scss";
+
+
+
+// MEDIA QUERIE DESKTOP MODE
+
+@media screen and (min-width: 600px) {
+    @import "desktop/style_d.scss";
+}
+
+// ********** Test swup ********
+
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}

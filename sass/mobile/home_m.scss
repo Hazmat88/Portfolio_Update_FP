@@ -1,0 +1,99 @@
+@import "compass/css3";
+
+// *********** TITLES HOME_m *************
+
+.titleAI, .titleBT{
+  font-size: 22vw;
+  font-family: 'aileronsregular', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+}
+
+
+.titleAI{
+  position:absolute;
+  top:150px;
+  left:4vw;
+}
+
+
+ .titleBT{
+   position:absolute;
+   top:280px;
+   left:30vw;
+ }
+
+
+// *********** HOME_m BACKGROUND IMG *************
+ header{
+     background:url(../img/home_m.png) no-repeat top center fixed;
+     @include background-size(cover);
+ }
+
+
+ // TEST PARALAX
+ #container {
+   position: relative;
+   height: 100vh;
+   width: 100%;
+   //border: solid 1px red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .sliderA {
+   .titleAI{
+     position:absolute;
+     top:150px;
+     left:4vw;
+   }
+ }
+
+// PARALAX ELEMENTS HOME_m
+  .img_m_1{
+   display: block;
+   position: absolute;
+   height: 260px !important;
+   width: 85px !important;
+   top:80vw;
+   left:6vw;
+   }
+
+  .img_m_2{
+   display: block;
+   position: absolute;
+   height: 90px !important;
+   width: 260px !important;
+   top:100vw;
+   right:6vw;
+   }
+
+
+  .img_m_3{
+    display: block;
+    position: absolute;
+    height: 90px !important;
+    width: 260px !important;
+    top:150vw;
+    left:6vw;
+   }
+
+  .img_m_4{
+    display: block;
+    position: absolute;
+    height: 260px !important;
+    width: 85px !important;
+    top:130vw;
+    right:6vw;
+   }
+
+
+ #imgparalax{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+ //  background-color: green;
+ }

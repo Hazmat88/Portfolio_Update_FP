@@ -1,0 +1,96 @@
+/* line 5, ../../sass/mobile/home_m.scss */
+.titleAI, .titleBT {
+  font-size: 22vw;
+  font-family: 'aileronsregular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 13, ../../sass/mobile/home_m.scss */
+.titleAI {
+  position: absolute;
+  top: 150px;
+  left: 4vw;
+}
+
+/* line 20, ../../sass/mobile/home_m.scss */
+.titleBT {
+  position: absolute;
+  top: 280px;
+  left: 30vw;
+}
+
+/* line 28, ../../sass/mobile/home_m.scss */
+header {
+  background: url(../img/home_m.png) no-repeat top center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 35, ../../sass/mobile/home_m.scss */
+#container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 46, ../../sass/mobile/home_m.scss */
+.sliderA .titleAI {
+  position: absolute;
+  top: 150px;
+  left: 4vw;
+}
+
+/* line 54, ../../sass/mobile/home_m.scss */
+.img_m_1 {
+  display: block;
+  position: absolute;
+  height: 260px !important;
+  width: 85px !important;
+  top: 80vw;
+  left: 6vw;
+}
+
+/* line 63, ../../sass/mobile/home_m.scss */
+.img_m_2 {
+  display: block;
+  position: absolute;
+  height: 90px !important;
+  width: 260px !important;
+  top: 100vw;
+  right: 6vw;
+}
+
+/* line 73, ../../sass/mobile/home_m.scss */
+.img_m_3 {
+  display: block;
+  position: absolute;
+  height: 90px !important;
+  width: 260px !important;
+  top: 150vw;
+  left: 6vw;
+}
+
+/* line 82, ../../sass/mobile/home_m.scss */
+.img_m_4 {
+  display: block;
+  position: absolute;
+  height: 260px !important;
+  width: 85px !important;
+  top: 130vw;
+  right: 6vw;
+}
+
+/* line 92, ../../sass/mobile/home_m.scss */
+#imgparalax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

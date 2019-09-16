@@ -1,0 +1,18 @@
+/* line 3, ../../sass/desktop/nav_d.scss */
+.titleAI, .titleBT {
+  display: none;
+}
+
+/* line 4, ../../sass/desktop/home_d.scss */
+header {
+  background: url(../img/home.png) no-repeat top center fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* line 12, ../../sass/desktop/home_d.scss */
+.img_m_1, .img_m_2, .img_m_3, .img_m_4 {
+  display: none;
+}

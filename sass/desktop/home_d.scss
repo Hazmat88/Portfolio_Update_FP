@@ -1,0 +1,14 @@
+@import "compass/css3";
+
+
+header{
+    background:url(../img/home.png) no-repeat top center fixed;
+    @include background-size(cover);
+}
+
+
+// home_m Elements hidden
+
+.img_m_1,.img_m_2,.img_m_3,.img_m_4{
+  display:none;
+}
